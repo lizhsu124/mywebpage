@@ -1,0 +1,16 @@
+name: "my-website"
+output_dir: "docs"
+navbar:
+  title: "Liz Hsu"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Data Mining Project"
+      href: Practice.html
+    - text: "Text Analytics"
+      href: Final-Blog-Post.html
+output:
+  html_document:
+    theme: flatly
+
+
