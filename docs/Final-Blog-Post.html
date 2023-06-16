@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+<meta name="date" content="2023-05-31" />
+
+<title>TED Talks Transcripts: Unearthing Insights and Trends through Text Analysis</title>
+
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.1/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<script src="site_libs/chart.js-2.4.0/./dist/Chart.min.js"></script>
+<script src="site_libs/chartJSRadar-binding-0.3.1/chartJSRadar.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Liz Hsu</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="Practice.html">Data Mining Project</a>
+</li>
+<li>
+  <a href="Final-Blog-Post.html">Text Analytics</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">TED Talks Transcripts: Unearthing Insights
+and Trends through Text Analysis</h1>
+<h4 class="date">2023-05-31</h4>
+
+</div>
+
+
+<p>TED Talks are a global platform that hosts a series of influential
+conferences where experts, innovators, and thought leaders share their
+ideas and experiences through short, powerful speeches. The acronym TED
+stands for Technology, Entertainment, and Design, but the talks cover a
+wide range of topics, including science, business, art, education, and
+more.</p>
+<p>TED Talks are more than just informative speeches. They are emotional
+journeys that leave the audiences feeling inspired, hopeful, and ready
+to take action. By exploring the patterns and techniques found within
+these transcripts, I hope to gain a deeper understanding of how TED
+Talks effectively communicate their messages and ultimately contribute
+to the spread of captivating ideas.</p>
+<p>In my analysis, I will go over how I collected the data, cleaned the
+data and performed text analysis.</p>
+<div id="data-scraping" class="section level2">
+<h2>Data Scraping</h2>
+<p>For the data scraping part, I scraped URLS, Titles, Dates, Likes and
+Transcripts from <a href="https://www.ted.com/talks"
+class="uri">https://www.ted.com/talks</a></p>
+<p>There are almost 6000 speeches from 2006 to 2023. One thing to note
+from the code for web scraping, the output I got for getting transcripts
+includes many websites background information that I don’t need for my
+analysis. Therefore I split the text into tokens and separated the
+actual transcripts from other words then save it in the list. The final
+outcome has two datasets, one includes just the titles, dates, and
+likes, the other includes all the unnested tokens, each match with the
+sppech title, dates and likes.</p>
+<pre class="r"><code>#URLs-------------
+
+ted_url &lt;- &quot;https://www.ted.com/talks&quot;
+
+# Iterate from the 1st to the 166th page
+urls &lt;- list()
+  
+for(i in 1:166){ 
+  url2 &lt;- paste0(ted_url,&quot;?page=&quot;,i)
+  
+  page &lt;- read_html(url2)
+  links &lt;- html_elements(page, &quot;#browse-results .ga-link&quot;) %&gt;%
+    html_attrs() %&gt;%
+    tibble() %&gt;%
+    rename(web = &quot;.&quot;) %&gt;%
+    unnest(cols = web) %&gt;%
+    filter(str_detect(web, &quot;/&quot;)) %&gt;%
+    mutate(url2 = paste0(&quot;https://www.ted.com&quot;, web)) %&gt;%
+    distinct() %&gt;%
+    pull(url2)
+  
+  urls[[i]] &lt;- links
+}
+# The &#39;urls&#39; variable now contains all the scraped URLs from pages 1 to 166.
+
+url_data &lt;- urls %&gt;% bind_rows()
+write.csv(url_data, &quot;url_data.csv&quot;, row.names = FALSE)
+
+
+#Title-------------
+titles &lt;- list()
+
+for (i in 2:5953) {
+tedtitles &lt;- read_html(urls[[i]]) %&gt;% 
+  html_elements(&quot;.mr-5&quot;) %&gt;% 
+  html_text()
+
+titles[[i]] &lt;- tedtitles
+}
+
+title_data &lt;- titles %&gt;% bind_rows()
+write.csv(title_data, &quot;title_data.csv&quot;, row.names = FALSE)
+
+
+titles &lt;- read_csv(&quot;title_data.csv&quot;)
+
+#Date-------------
+date_list &lt;- list()
+
+for (i in 1:166){
+  url2 &lt;- paste0(ted_url,&quot;?page=&quot;,i)
+  
+   date &lt;- url2 %&gt;% 
+    read_html() %&gt;% 
+    html_elements(&quot;.meta__val&quot;) %&gt;% 
+    html_text() %&gt;% 
+    tibble() %&gt;% 
+    rename(date=&quot;.&quot;) 
+   
+   date_list[[i]] &lt;- date
+}
+
+
+date_list2 &lt;- date_list %&gt;% 
+  bind_rows()
+
+date_list2 &lt;- date_list2 %&gt;% slice(-(1:3))
+
+date_list2 &lt;- date_list2 %&gt;% mutate(date=str_replace(date,pattern=&quot;\n&quot;,replacement=&quot;&quot;))
+
+write_csv(date_list2, &quot;date_data.csv&quot;)
+
+
+
+#Transcript------------- 
+urls$transcript_url &lt;- paste0(urls$., &quot;/transcript&quot;)
+
+tran_list &lt;- list()
+first_list &lt;- list()
+second_list &lt;- list()
+first_half &lt;- list()
+final &lt;-list()
+
+# I noticed that the word &quot;transcript&quot; always appear before the actual transcript and the pattern &quot;embed.ted.com&quot; appears at the end of the transcript. I decided to find the location of the first &quot;transcript&quot; and &quot;embed.ted.com&quot; then extract all the text in between.
+
+for (i in 1:5953){
+  tran_list[[i]] &lt;- urls$transcript_url[[i]] %&gt;% 
+    read_html(&quot;.css-82uonn&quot;) %&gt;% 
+    html_text() %&gt;% 
+    tibble() %&gt;% 
+    unnest_tokens(., input=&quot;.&quot;, output=word) 
+    
+    first_list[[i]] &lt;- min(which(tran_list[[i]] == &quot;transcript&quot;))  
+}
+
+for (i in 1:5953){
+  first_half[[i]] &lt;- tran_list[[i]] %&gt;% 
+    slice(-c(1:first_list[[i]])) 
+  
+  second_list[[i]] &lt;- min(which(tran_list[[i]] == &quot;embed.ted.com&quot;))
+  final[[i]] &lt;- first_half[[i]] %&gt;% 
+    slice(-c(second_list[[i]]:nrow(first_half[[i]]))) %&gt;% 
+    anti_join(stop_words) %&gt;% 
+    anti_join(new_stops) %&gt;% 
+    mutate(title = titles$.[[i]]) %&gt;% 
+    mutate(date = dates$date[[i]])
+}
+
+
+final_data &lt;- final %&gt;% bind_rows() 
+write_csv(final_data, &quot;final_data.csv&quot;)
+
+
+
+#Likes-------------
+like_list &lt;- list()
+likes &lt;- list()
+
+
+for (i in 5872:5953){
+  like_list[[i]] &lt;- urls$.[[i]] %&gt;% 
+    read_html() %&gt;% 
+    html_elements(&quot;#maincontent .items-center.opacity-100&quot;) %&gt;% 
+    html_text() 
+   
+  
+  likes[[i]] &lt;- like_list[[i]][[3]] %&gt;% 
+    str_extract(&quot;\\d+(\\.\\d+)?&quot;) %&gt;%  # Extract numbers with optional decimal places
+    as.numeric()*1000
+}
+
+Likes &lt;- data.frame(LikeCount = unlist(likes))
+
+#Views-------------
+view_list &lt;- list()
+
+for (i in 5617:5953){
+view_list[[i]] &lt;- urls$.[[i]] %&gt;% 
+  read_html() %&gt;% 
+  html_elements(&quot;.truncate&quot;) %&gt;% 
+  html_text() %&gt;%
+  str_extract(&quot;\\d{1,3}(?:,\\d{3})*(?=\\sviews)&quot;)
+}
+
+
+Views &lt;- data.frame(Views = unlist(view_list))
+Views$Views &lt;- as.numeric(gsub(&quot;,&quot;, &quot;&quot;, Views$Views))</code></pre>
+</div>
+<div id="data-cleaning-and-wrangling" class="section level2">
+<h2>Data cleaning and wrangling</h2>
+<p>Since I scraped all the variables separately, I did a left join to
+combine the data then saved them in csv files for future analysis. I
+also extract year from the date column for further analysis.</p>
+<pre class="r"><code>final_data$date &lt;- my(final_data$date)
+
+
+combined_data &lt;- cbind(titles, Likes, dates, Views) %&gt;% rename(Title=&quot;.&quot;)
+combined_data$date &lt;- my(combined_data$date)
+combined_data$year &lt;- format(combined_data$date, &quot;%Y&quot;)
+
+
+final_data &lt;- final_data %&gt;%
+  left_join(combined_data, by = c(&quot;title&quot; = &quot;Title&quot;))
+
+write_csv(final_data, &quot;final_data.csv&quot;)
+write_csv(combined_data, &quot;combined_data.csv&quot;)</code></pre>
+</div>
+<div id="data-overview" class="section level2">
+<h2>Data Overview</h2>
+<p>This dataset includes titles, likes, date, and year.</p>
+<pre class="r"><code>combined_data %&gt;% head()</code></pre>
+<pre><code>## # A tibble: 6 × 5
+##   Title                                        LikeCount date        year  Views
+##   &lt;chr&gt;                                            &lt;dbl&gt; &lt;date&gt;     &lt;dbl&gt;  &lt;dbl&gt;
+## 1 The year without summer                           6200 2023-05-01  2023 240294
+## 2 3 ways your money can fight climate change       13000 2023-05-01  2023 547860
+## 3 What the world can learn from China&#39;s innov…     16000 2023-05-01  2023 658698
+## 4 The urgent risks of runaway AI -- and what …     20000 2023-05-01  2023 799269
+## 5 Why were there three popes at the same time?     15000 2023-05-01  2023 564808
+## 6 Does working hard really make you a good pe…     21000 2023-05-01  2023 833900</code></pre>
+<p>This dataset includes word (unnested token), title, date, likes, and
+year.</p>
+<pre class="r"><code>final2 %&gt;% head()</code></pre>
+<pre><code>## # A tibble: 6 × 6
+##   word      title                   date       LikeCount  year  Views
+##   &lt;chr&gt;     &lt;chr&gt;                   &lt;date&gt;         &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
+## 1 april     The year without summer 2023-05-01      6200  2023 240294
+## 2 10th      The year without summer 2023-05-01      6200  2023 240294
+## 3 1815      The year without summer 2023-05-01      6200  2023 240294
+## 4 moments   The year without summer 2023-05-01      6200  2023 240294
+## 5 sun       The year without summer 2023-05-01      6200  2023 240294
+## 6 disappear The year without summer 2023-05-01      6200  2023 240294</code></pre>
+</div>
+<div id="basic-exploratory-data-analysis" class="section level2">
+<h2>Basic exploratory data analysis</h2>
+<p>There are 5953 speeches in the data set.</p>
+<pre class="r"><code>nrow(combined_data)</code></pre>
+<pre><code>## [1] 5953</code></pre>
+<p>There are over 4 million words after I unnested all 5953
+transcipts.</p>
+<pre class="r"><code>nrow(final_data)</code></pre>
+<pre><code>## [1] 4010210</code></pre>
+</div>
+<div id="more-data-cleaning-and-wrangling" class="section level2">
+<h2>More data cleaning and wrangling</h2>
+<p>Remove more stop words from the data and save it in a new
+dataframe</p>
+<pre class="r"><code>stop_words2 &lt;- tibble(word = c(&quot;var&quot;, &quot;ve&quot;, &quot;_vwo_code&quot;, &quot;activegroupsloaded&quot;,&quot;categoriesconsentedto&quot;,
+                               &quot;const&quot;, &quot;eslint&quot;, &quot;window.onetrustactivegroups&quot;, &quot;use_existing_jquery&quot;,
+                               &quot;library_tolerance&quot;,&quot;hide_element&quot;,&quot;settings_tolerance&quot;,&quot;ll&quot;,
+                               &quot;__html&quot;,&quot;__userhasconsentedtotargetingcookies&quot;,&quot;c0004&quot;,&quot;dangerouslysetinnerhtml&quot;,
+                               &quot;embed.ted.com&quot;,&quot;onetrustactivegroupsloaded&quot;,&quot;optanonwrapper&quot;,
+                               &quot;react&#39;s&quot;,&quot;interactioncounter&quot;,&quot;interactionstatistic&quot;,&quot;interactiontype&quot;,
+                               &quot;userinteractioncount&quot;,&quot;watchaction&quot;,&quot;window.dispatchevent&quot;,
+                               &quot;window.location.reload&quot;,&quot;window.onetrust.onconsentchanged&quot;,
+                               &quot;window.onetrustactivegroups.includes&quot;,&quot;613676&quot;,&quot;2500&quot;,&quot;1&quot;,&quot;0&quot;,
+                               &quot;d.createelement&quot;,&quot;use_existing_jquery:function&quot;,
+                               &quot;library_tolerance:function&quot;,&quot;finish:function&quot;,&quot;_vis_opt_path_hides&quot;,
+                               &quot;_vwo_code.finish&quot;,&quot;d.getelementbyid&quot;,&quot;e.parentnode.removechild&quot;,
+                               &quot;apos&quot;,&quot;quot&quot;,&quot;don&quot;,&quot;2000&quot;,&quot;account_id&quot;,&quot;1.3&quot;,&quot;is_spa&quot;,&quot;underscore&quot;,&quot;underscores&quot;,
+                               &quot;finished:function&quot;,&quot;load:function&quot;,&quot;t.fetchpriority&quot;,
+                               &quot;d.getelementsbytagname&quot;,&quot;t.innertext&quot;,&quot;t.onerror&quot;))
+final2 &lt;- final_data %&gt;% 
+  anti_join(stop_words2)
+
+final2$year &lt;- format(final2$date, &quot;%Y&quot;)
+
+
+write_csv(final2, &quot;final_data2.csv&quot;)</code></pre>
+<div id="number-of-ted-talks-each-year" class="section level3">
+<h3>Number of Ted Talks each year</h3>
+<pre class="r"><code>combined_data %&gt;% 
+  group_by(year) %&gt;% 
+  count() %&gt;% 
+  ggplot()+
+  geom_col(aes(x=year, y=n),fill = &quot;steelblue&quot;) +
+  labs(x = &quot;Year&quot;, y = &quot;Number of Ted Talks&quot;) +
+  ggtitle(&quot;Number of Ted Talks Each Year&quot;) +
+  theme(plot.title = element_text(hjust = 0.5))</code></pre>
+<p><img src="Final-Blog-Post_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="most-viewed-ted-talks-by-year" class="section level3">
+<h3>Most Viewed Ted Talks by year</h3>
+<pre class="r"><code>max_views&lt;-combined_data %&gt;%
+  group_by(year)%&gt;%
+  slice(which.max(Views))%&gt;%
+  ungroup()
+
+
+max_views %&gt;%
+  plot_ly(x=~year, y=~Views, hoverinfo=&quot;text&quot;, text=~paste(&quot;Title:&quot;, Title, &quot;&lt;br&gt;Viewcounts:&quot;, Views))%&gt;%
+  add_trace(type = &quot;scatter&quot;, mode = &quot;markers+lines&quot;, 
+            marker = list(color = &quot;deepskyblue&quot;, size = 10), line = list(color = &quot;steelblue&quot;)) %&gt;%
+  layout(title=~&quot;Most Viewed Ted talk by year&quot;)</code></pre>
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-9fc9208842344200688c" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-9fc9208842344200688c">{"x":{"visdat":{"a6c2333636d":["function () ","plotlyVisDat"]},"cur_data":"a6c2333636d","attrs":{"a6c2333636d":{"x":{},"y":{},"hoverinfo":"text","text":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter","mode":"markers+lines","marker":{"color":"deepskyblue","size":10},"line":{"color":"steelblue"},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Most Viewed Ted talk by year","xaxis":{"domain":[0,1],"automargin":true,"title":"year"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Views"},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023],"y":[75127227,10454131,28964529,41031669,62172277,32867880,68428405,39687092,55115374,45015633,67304784,31527828,46853062,18653764,9667769,11664153,15343475,5123564],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"text":["Title: Do schools kill creativity? <br>Viewcounts: 75127227","Title: The habits of happiness <br>Viewcounts: 10454131","Title: My stroke of insight <br>Viewcounts: 28964529","Title: 10 things you didn't know about orgasm <br>Viewcounts: 41031669","Title: How great leaders inspire action <br>Viewcounts: 62172277","Title: How to spot a liar <br>Viewcounts: 32867880","Title: Your body language may shape who you are <br>Viewcounts: 68428405","Title: Looks aren't everything. Believe me, I'm a model. <br>Viewcounts: 39687092","Title: How to speak so that people want to listen <br>Viewcounts: 55115374","Title: What makes a good life? Lessons from the longest study on happiness <br>Viewcounts: 45015633","Title: Inside the mind of a master procrastinator <br>Viewcounts: 67304784","Title: The future we're building -- and boring <br>Viewcounts: 31527828","Title: My philosophy for a happy life <br>Viewcounts: 46853062","Title: Sleep is your superpower <br>Viewcounts: 18653764","Title: What is schizophrenia? <br>Viewcounts: 9667769","Title: What causes dandruff, and how do you get rid of it? <br>Viewcounts: 11664153","Title: Elon Musk talks Twitter, Tesla and how his brain works — live at TED2022 <br>Viewcounts: 15343475","Title: Have you met your soulmate? <br>Viewcounts: 5123564"],"type":"scatter","mode":"markers+lines","marker":{"color":"deepskyblue","size":10,"line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"steelblue"},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<div id="top3-most-viewed-speeches" class="section level2">
+<h2>top3 most viewed speeches</h2>
+<pre class="r"><code>max_views %&gt;% top_n(Views, n=3)</code></pre>
+<pre><code>## # A tibble: 3 × 5
+##   Title                                      LikeCount date        year    Views
+##   &lt;chr&gt;                                          &lt;dbl&gt; &lt;date&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+## 1 Do schools kill creativity?                     2200 2006-06-01  2006 75127227
+## 2 Your body language may shape who you are        2000 2012-10-01  2012 68428405
+## 3 Inside the mind of a master procrastinator      2000 2016-03-01  2016 67304784</code></pre>
+<div id="wordcloud-for-do-schools-kill-creativity"
+class="section level3">
+<h3>Wordcloud for “Do schools kill creativity?”</h3>
+<p>We can see that in the most popular speech which has over 75 million
+views since 2011, the most common words are <strong>education</strong>,
+<strong>people</strong>, <strong>school</strong> and
+<strong>system</strong>.</p>
+<pre class="r"><code>pop1 &lt;- final2 %&gt;% 
+  filter(title==&quot;Do schools kill creativity?&quot;) %&gt;% 
+  filter(!grepl(&quot;laughter&quot;,word))
+  
+
+set.seed(2021)
+pop1 %&gt;% 
+  count(word, sort=T) %&gt;% 
+  with(wordcloud(word,n,max.words=50,color=wes_palette(&quot;Darjeeling1&quot;))) %&gt;% 
+  title(&quot;Wordcloud for &#39;Do schools kill creativity?&#39; &quot;) </code></pre>
+<p><img src="Final-Blog-Post_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="wordcloud-for-your-body-language-may-shape-who-you-are"
+class="section level3">
+<h3>Wordcloud for “Your body language may shape who you are”</h3>
+<pre class="r"><code>pop2 &lt;- final2 %&gt;% 
+  filter(title==&quot;Your body language may shape who you are&quot;) %&gt;% 
+  filter(!grepl(&quot;laughter&quot;,word))
+  
+set.seed(2)  
+pop2 %&gt;% 
+  count(word, sort=T) %&gt;% 
+  with(wordcloud(word,n,max.words=30,color=wes_palette(&quot;Darjeeling1&quot;))) %&gt;% 
+  title(&quot;Wordcloud for &#39;Your body language may shape who you are&#39; &quot;) </code></pre>
+<p><img src="Final-Blog-Post_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>
+<div id="wordcloud-for-inside-the-mind-of-a-master-procrastinator"
+class="section level3">
+<h3>Wordcloud for “Inside the mind of a master procrastinator”</h3>
+<pre class="r"><code>pop3 &lt;- final2 %&gt;% 
+  filter(title==&quot;Inside the mind of a master procrastinator&quot;) 
+
+set.seed(1234)
+pop3 %&gt;% 
+  count(word, sort=T) %&gt;% 
+  with(wordcloud(word,n,max.words=40,color=wes_palette(&quot;Darjeeling1&quot;))) %&gt;% 
+  title(&quot;Wordcloud for &#39;Inside the mind of a master procrastinator&#39; &quot;) </code></pre>
+<p><img src="Final-Blog-Post_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+</div>
+<div id="sentiment-analysis" class="section level2">
+<h2>Sentiment Analysis</h2>
+<p>This is the comparison word cloud for to see the common words for
+positive and negative sentiment.</p>
+<pre class="r"><code>t_bing&lt;-final2 %&gt;%
+  inner_join(get_sentiments(&quot;bing&quot;), by=&quot;word&quot;, relationship=&quot;many-to-many&quot;)%&gt;%
+  count(sentiment, word)%&gt;%
+  spread(sentiment, n, fill = 0) %&gt;% 
+  data.frame(row.names = &quot;word&quot;)
+
+set.seed(2023)
+comparison.cloud(t_bing, max.words=40, title.size=1.5)</code></pre>
+<p><img src="Final-Blog-Post_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p>This is a radar chart for sentiment analysis. There are 8 emotions
+(Joy, Sadness, Surprise, Trust, Anger, Anticipation, Disgust and Fear)
+and 2 sentiments (Positive and Negative) based on NRC lexicon. Radar
+chart is useful when comparing many documents by year. We can see that
+the most common sentiment is <strong>Trust</strong> followed by
+<strong>Anticipation</strong>, both are aligned with Ted Talks value
+being inspiring and motivating.</p>
+<pre class="r"><code>sentiment_spread&lt;-final2%&gt;%
+  inner_join(get_sentiments(&quot;nrc&quot;), by=&quot;word&quot;, relationship=&quot;many-to-many&quot;)%&gt;%
+  filter(!grepl(&quot;positive|negative&quot;, sentiment))%&gt;%
+  mutate(index=year)%&gt;%
+  count(sentiment, index)%&gt;%
+  spread(index, n)
+
+chartJSRadar(sentiment_spread)</code></pre>
+<canvas class="chartJSRadar html-widget html-fill-item-overflow-hidden html-fill-item" height="480" id="htmlwidget-5b448479aaddde33582d" width="672"></canvas>
+<script type="application/json" data-for="htmlwidget-5b448479aaddde33582d">{"x":{"data":{"labels":["anger","anticipation","disgust","fear","joy","sadness","surprise","trust"],"datasets":[{"label":"2006","data":[1488,3322,1074,2049,2905,1662,1913,3359],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"2007","data":[2757,5992,2032,4131,5139,3028,3299,6920],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"2008","data":[3928,9210,3029,5910,8191,4566,5262,10464],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"},{"label":"2009","data":[3915,9345,2883,5876,8206,4721,5225,10764],"backgroundColor":"rgba(255,255,0,0.2)","borderColor":"rgba(255,255,0,0.8)","pointBackgroundColor":"rgba(255,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,255,0,0.8)"},{"label":"2010","data":[4796,10547,3928,7226,9400,5897,5621,12907],"backgroundColor":"rgba(255,0,255,0.2)","borderColor":"rgba(255,0,255,0.8)","pointBackgroundColor":"rgba(255,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,255,0.8)"},{"label":"2011","data":[4925,9669,3482,7318,8886,5932,5700,12024],"backgroundColor":"rgba(0,255,255,0.2)","borderColor":"rgba(0,255,255,0.8)","pointBackgroundColor":"rgba(0,255,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,255,0.8)"},{"label":"2012","data":[6465,12772,4547,9260,11344,7369,7264,15006],"backgroundColor":"rgba(255,165,0,0.2)","borderColor":"rgba(255,165,0,0.8)","pointBackgroundColor":"rgba(255,165,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,165,0,0.8)"},{"label":"2013","data":[5552,10599,4085,7999,9127,6587,6084,13114],"backgroundColor":"rgba(160,32,240,0.2)","borderColor":"rgba(160,32,240,0.8)","pointBackgroundColor":"rgba(160,32,240,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(160,32,240,0.8)"},{"label":"2014","data":[5314,9590,3701,7892,8753,5895,5457,12916],"backgroundColor":"rgba(255,192,203,0.2)","borderColor":"rgba(255,192,203,0.8)","pointBackgroundColor":"rgba(255,192,203,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,192,203,0.8)"},{"label":"2015","data":[5215,9565,3762,7768,8556,6153,5475,11411],"backgroundColor":"rgba(255,0,0,0.2)","borderColor":"rgba(255,0,0,0.8)","pointBackgroundColor":"rgba(255,0,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,0,0.8)"},{"label":"2016","data":[5459,10549,3866,8137,9457,6031,5904,13274],"backgroundColor":"rgba(0,255,0,0.2)","borderColor":"rgba(0,255,0,0.8)","pointBackgroundColor":"rgba(0,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,0,0.8)"},{"label":"2017","data":[6754,12429,4787,10070,11227,7891,6981,15397],"backgroundColor":"rgba(0,0,255,0.2)","borderColor":"rgba(0,0,255,0.8)","pointBackgroundColor":"rgba(0,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,0,255,0.8)"},{"label":"2018","data":[8595,16304,6340,12826,15279,10254,9538,21037],"backgroundColor":"rgba(255,255,0,0.2)","borderColor":"rgba(255,255,0,0.8)","pointBackgroundColor":"rgba(255,255,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,255,0,0.8)"},{"label":"2019","data":[9133,16413,6916,13418,14936,10562,9502,20581],"backgroundColor":"rgba(255,0,255,0.2)","borderColor":"rgba(255,0,255,0.8)","pointBackgroundColor":"rgba(255,0,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,0,255,0.8)"},{"label":"2020","data":[8827,14772,6196,13628,11979,9925,7539,19504],"backgroundColor":"rgba(0,255,255,0.2)","borderColor":"rgba(0,255,255,0.8)","pointBackgroundColor":"rgba(0,255,255,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(0,255,255,0.8)"},{"label":"2021","data":[6183,11616,4637,9732,9698,7417,5864,15380],"backgroundColor":"rgba(255,165,0,0.2)","borderColor":"rgba(255,165,0,0.8)","pointBackgroundColor":"rgba(255,165,0,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,165,0,0.8)"},{"label":"2022","data":[6117,11718,4313,9234,10573,7022,6204,15110],"backgroundColor":"rgba(160,32,240,0.2)","borderColor":"rgba(160,32,240,0.8)","pointBackgroundColor":"rgba(160,32,240,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(160,32,240,0.8)"},{"label":"2023","data":[2361,4319,1626,3335,3907,2443,2194,5682],"backgroundColor":"rgba(255,192,203,0.2)","borderColor":"rgba(255,192,203,0.8)","pointBackgroundColor":"rgba(255,192,203,0.8)","pointBorderColor":"#fff","pointHoverBackgroundColor":"#fff","pointHoverBorderColor":"rgba(255,192,203,0.8)"}]},"options":{"responsive":true,"title":{"display":false,"text":null},"scale":{"ticks":{"min":0},"pointLabels":{"fontSize":18}},"tooltips":{"enabled":true,"mode":"label"},"legend":{"display":true}}},"evals":[],"jsHooks":[]}</script>
+<div id="topic-modeling" class="section level3">
+<h3>Topic Modeling</h3>
+<p>I think 9 topics is the appropriate number for building the model as
+it reflects each topic clearly and we can identify the theme for each
+one of them. I roughly categorized these themes as follows:</p>
+<ol style="list-style-type: decimal">
+<li>Healthcare</li>
+<li>Programming</li>
+<li>Data Science/ Technology</li>
+<li>Ecology</li>
+<li>Education</li>
+<li>Astronomy</li>
+<li>Economics/ Global Issues</li>
+<li>History/ Politics</li>
+<li>Entertainment</li>
+</ol>
+<pre class="r"><code>ted_dtm &lt;- final2 %&gt;%
+  count(title, word, sort=T) %&gt;% 
+  cast_dtm(document = title, term = word, value =n )
+
+ted_lda &lt;- LDA(ted_dtm, k = 9, control = list(seed = 1234))
+
+saveRDS(ted_lda, &quot;ted_lda.rds&quot;)</code></pre>
+<pre class="r"><code>ted_lda &lt;- readRDS(&quot;ted_lda.rds&quot;)
+
+ted_topics &lt;- tidy(ted_lda, matrix = &quot;beta&quot;)
+
+top_terms &lt;- ted_topics %&gt;%
+  filter(!grepl(&quot;people&quot;,term)) %&gt;% 
+  filter(!grepl(&quot;window&quot;,term)) %&gt;% 
+  filter(!grepl(&quot;return&quot;,term)) %&gt;% 
+  filter(!grepl(&quot;didn&quot;,term)) %&gt;% 
+  group_by(topic) %&gt;%
+  slice_max(beta, n = 10) %&gt;% 
+  ungroup() %&gt;%
+  arrange(topic, -beta)
+
+
+top_terms %&gt;%
+  mutate(term = reorder_within(term, beta, topic)) %&gt;%
+  ggplot(aes(x =beta , y = term, fill =factor(topic))) +
+  geom_col(show.legend = FALSE) +
+  facet_wrap(~factor(topic)  , scales = &quot;free&quot; ) +
+  scale_y_reordered()</code></pre>
+<p><img src="Final-Blog-Post_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+</div>
+<div id="conclusion" class="section level3">
+<h3>Conclusion</h3>
+<p>Analyzing Ted Talks transcripts is really interesting and fun for
+text analysis. It provides large amount of texts and a variety of
+topics. The speeches themselves are concise and easily comprehensible,
+allowing for a smooth understanding of the content. Thorough my
+analysis, I can see that the speakers have done an exceptional job in
+staying focused on their respective topics, while also captivating the
+audience with their engaging and humorous delivery. The word cloud
+visualization provides valuable insights into the topics and key terms
+emphasized by the speakers. Topic modeling also successfully categorized
+and characterized each talk, offering a wide range of knowledge for
+individuals interesting in diverse subjects. I would definitely
+recommend anyone who is new to text analytics to try working with this
+type of data! Just be mindful that web scraping could be a little
+tricky!</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
