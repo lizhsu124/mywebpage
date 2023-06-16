@@ -1,0 +1,21 @@
+---
+title: "My Data Analysis Journey "
+---
+
+**Hey there!**
+
+My name is Liz, a master's student at the University of Denver studying Business Analytics.
+
+I've always been passionate about the power of data and its ability to drive impactful insights. Through this website, I want to share some projects that I've worked on, and also let it be a reminder to myself of my progress overtime. I'm constantly learning and exploring new analytical techniques, keeping up with the trend in the field. This blog is my way of documenting my experience, sharing insights, and hopefully inspiring anyone who's interested in data science.
+
+A little bit about my background:
+
+I used to be a project manager working with software development teams. I love being a part of a team that delivers revolutionary solutions to businesses because of the impact it has in next-gen technology. Being a project manager definitely brought me a great sense of achievement since I was surrounded by some of the most talented people and was able to see the whole journey from preparation to launch. Overtime, I realized that to be able to continue to grow in the industry, I have to bring more value and passion to what I do. I wanted to start taking my passion for data seriously, become a data analyst and leverage my knowledge and experience in the data science field.
+
+Hope you enjoy looking at some of my work!
+
+Here is my contact information:
+
+Email: [lizhsu124\@gmail.com](mailto:lizhsu124@gmail.com){.email}
+
+![](linkedin.png){width="16"} LinkedIn: <https://www.linkedin.com/in/lizhsu/>
