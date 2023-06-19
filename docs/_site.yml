@@ -9,6 +9,8 @@ navbar:
       href: Practice.html
     - text: "Text Analytics"
       href: Final-Blog-Post.html
+    - text: "Predictive Analytics"
+      href: Predictive-Analytics.html
 output:
   html_document:
     theme: flatly
